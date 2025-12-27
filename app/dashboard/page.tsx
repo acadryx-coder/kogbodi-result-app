@@ -24,7 +24,8 @@ export default function Dashboard() {
     return null
   }
 
-  const role = 'teacher' // We'll add real roles later
+  // TODO: Fetch real role from Supabase profiles table (we'll add later)
+  const role: 'teacher' | 'admin' | 'student' | 'parent' = 'teacher' // Change to 'admin' for testing if needed
 
   return (
     <div className="space-y-6">
