@@ -25,7 +25,7 @@ export default function Dashboard() {
   }
 
   // TODO: Fetch real role from Supabase profiles table (we'll add later)
-  const role: 'teacher' | 'admin' | 'student' | 'parent' = 'teacher' // Change to 'admin' for testing if needed
+  const role: 'teacher' | 'admin' | 'student' | 'parent' = 'teacher'  // Change to 'admin' for testing
 
   return (
     <div className="space-y-6">
@@ -63,6 +63,13 @@ export default function Dashboard() {
           <p className="text-gray-600">First Term 2025/2026 - 85% Average</p>
         </div>
       )}
+
+      {role === 'parent' && (
+        <div className="bg-white rounded-lg p-6 shadow">
+          <h3 className="text-xl font-semibold text-primary mb-4">Your Child's Results</h3>
+          <p className="text-gray-600">First Term 2025/2026 - View details</p>
+        </div>
+      )}
     </div>
   )
-}
+                }
